@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n,i;
+    int arr[n];
+    int *ptr = &arr[0];
+     cin >>n;
+    cout << "enter elements of array" << endl;
+
+    for(i=0;i<=n;i++)
+    {
+        cin >> arr[i];
+    }
+    cout << "enetred elements of array are" << endl;
+    for(int i=0;i<=n;i++)
+    {
+        cout << arr[i]  << "\t" << " " << ptr << endl;
+        ptr++;
+    }
+    return 0;
+}
