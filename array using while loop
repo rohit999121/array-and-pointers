@@ -1,0 +1,29 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout<<"Hello World";
+    int n;
+    cout << "no of times while loop run" << endl;
+    cin >> n;
+    while(n--)
+    {
+        int m;
+        cout << "size of array" << endl;
+        cin >> m;
+        int a[m];
+        for(int i=1;i<m;i++)
+        {
+            cout << "input numbers" << endl;
+            cin >> a[i];
+        }
+        for(int i=1;i<m;i++)
+        {
+            cout << "output numbers" << a[i] << endl;
+        }
+    }
+
+    return 0;
+}
