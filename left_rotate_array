@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+void leftRotatbyOne(int arr[],int n){
+    int first = arr[0];
+    for(int i=0;i<n;i++){
+        arr[i-1] = arr[i];
+    }
+    cout << endl;
+    arr[n-1] = first;
+
+}
+void leftRotate(int arr[],int n,int r){
+    for(int i=0;i<r;i++){
+        leftRotatbyOne(arr,n);
+    }
+}
+
+int main() {
+    int i,j,k,r=2;
+    int arr[] ={21,23,43,23,54,34,87};
+    int n = sizeof(arr)/sizeof(arr[0]);
+
+    cout << "inital array ->" << "\t";
+    for(i=0;i<n;i++){
+        cout << arr[i] << " ";
+    }
+
+    leftRotate(arr,n,r);
+    for(int i=0;i<n;i++){
+        cout << arr[i] << " ";
+    }
+
+    return 0;
+}
