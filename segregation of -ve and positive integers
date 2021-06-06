@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+void rofun(int arr[],int n){
+    int temp = arr[n-1];
+   for(int i=n-1;i>=0;i--){
+     arr[i] = arr[i-1];
+   }
+   arr[0] = temp;
+}
+int main() {
+   int arr[] = {9, 8, 7, 6, 4, 2, 1, 3};
+   int n = sizeof(arr)/sizeof(arr[0]);
+   cout << "size of array " << n << endl << "initial array :" << "\t";
+   for(int i=0;i<n;i++){
+       cout << arr[i] << " ";
+   }
+   cout << endl;
+   rofun(arr,n);
+   cout << "new array:" << "\t";
+   for(int i=0;i<n;i++){
+       cout << arr[i] << " ";
+   }
+}
