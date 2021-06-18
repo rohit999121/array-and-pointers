@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+#include <iostream>
+
+using namespace std;
+
+int sellingShare(int arr[],int n){
+    int profit = 0;
+   int  maxCost = 0;
+    int minPrice = arr[0];
+    for(int i=0;i<n;i++){
+        minPrice = min(minPrice,arr[i]);
+        profit = arr[i] - minPrice;
+        maxCost = max(maxCost,profit);
+        
+    }
+    return maxCost;
+}
+int main()
+{
+    int arr[] = {7,2,1,4,3,6};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    cout << sellingShare(arr,n);
+    
+    return 0;
+}
